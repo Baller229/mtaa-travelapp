@@ -1,0 +1,28 @@
+
+
+INSERT INTO playground_destinations (trip_name, trip_city, trip_specs, trip_price, latitude, longitude)
+VALUES
+	('Los Angeles Adventure', 'Los Angeles', 'During your adventure trip, you can explore famous attractions 
+	 										  like Hollywood Walk of Fame, Universal Studios Hollywood, and the Getty Center. 
+	 										  You can also take a scenic drive along the Pacific Coast Highway, explore the Santa Monica Pier, 
+	 										  and stroll through the famous Venice Beach boardwalk.', 2500.00, 34.0522, -118.2437),
+											  
+	('New York City Gateway', 'New York City', 'New York City Gateway is a perfect destination for those who want to experience the fast-paced lifestyle of one of the world most exciting cities. The city offers iconic landmarks like the Empire State Building, Statue of Liberty, and Central Park, along with a vibrant food and art scene. The citys bustling energy, stunning architecture, and diverse culture make it an ideal destination for a thrilling vacation.', 3500.00, 40.7128, -74.0060),
+	('Hawaii Island Hopping', 'Hawaii', 'Hawaii Island Hopping is an adventure-packed tour that takes you on an unforgettable journey across the beautiful Hawaiian islands. The tour offers a variety of experiences, from exploring active volcanoes and hiking through lush forests to swimming in crystal clear waters and relaxing on pristine beaches. The Hawaiian islands are also home to a rich culture, which you can experience through traditional Hawaiian food, dance, and music.', 5000.00, 19.8968, -155.5828),
+	('Paris Romance Tour', 'Paris', 'The Paris Romance Tour is perfect for couples looking to experience the city of love. This tour takes you on a romantic journey through Paris iconic landmarks, including the Eiffel Tower, the Louvre, and the Seine River. You can enjoy a scenic boat ride, a romantic dinner in a classic Parisian restaurant, and explore the city charming streets and quaint cafes. The Paris Romance Tour is the perfect way to create unforgettable memories with your loved one.', 4000.00, 48.8566,  2.3522),
+	('Sicily Mafia Meeting', 'Palermo', 'Palermo is the cultural and artistic capital of Sicily, Italy. The city is steeped in history, and its streets are lined with stunning Baroque buildings and ancient ruins. You can explore the city rich culture by visiting museums and art galleries, enjoying local Sicilian cuisine, and experiencing the bustling street markets. Palermo is also a great base for exploring the beautiful beaches and scenic countryside of Sicily.', 19000.00, 38.1157,  13.3613);
+
+
+
+INSERT INTO playground_destinationimages (trip_id, trip_image)
+VALUES
+   (1, 'destination_images/Los Angeles Adventure.jpg'),
+   (2, 'destination_images/New York City Gateway.jpg'),
+   (3, 'destination_images/Hawaii Island Hopping.jpg'),
+   (4, 'destination_images/Paris Romance Tour.jpg'),   
+   (5, 'destination_images/Palermo.jpg'),
+   (1, 'destination_images/Los Angeles Adventure2.jpg'),
+   (2, 'destination_images/New York City Gateway2.jpg'),
+   (3, 'destination_images/Hawaii Island Hopping2.jpg'),
+   (4, 'destination_images/Paris Romance Tour2.jpg'),   
+   (5, 'destination_images/Palermo2.jpg');

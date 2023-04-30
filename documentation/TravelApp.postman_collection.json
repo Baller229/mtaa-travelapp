@@ -1,0 +1,1533 @@
+{
+	"info": {
+		"_postman_id": "940c4135-bd2c-4d72-a18d-abe56166a66b",
+		"name": "TravelApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21703049"
+	},
+	"item": [
+		{
+			"name": "login auth/jwt/create/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "patrikfusek2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "vrtulnik",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/jwt/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"jwt",
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example 401 unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "patrikfusek2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "vrtulnik",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/jwt/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"jwt",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "JWT realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"No active account found with the given credentials\"\n}"
+				},
+				{
+					"name": "example 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "patrikfusek2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "vrtulnik4020",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/jwt/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"jwt",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "486"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4Mjk1ODkzNywiaWF0IjoxNjgyODcyNTM3LCJqdGkiOiI4NmFlMDFiMmI1MmM0NzE0OGNjZTQyZGQ1NjY3NjY0NSIsInVzZXJfaWQiOjI1fQ.1B0T5PlqAIRXyLAJPawvUaY6wW1xEjClT-m7HuyNLL4\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyOTU4OTM3LCJpYXQiOjE2ODI4NzI1MzcsImp0aSI6IjczMWQ4MzA0OGIwYzQxMTI4NWQwN2Q5MTlmYzczMDk1IiwidXNlcl9pZCI6MjV9.y4H-fHj7nd9AMBftJJ4OhjuWv_CZjlC46Z4wTPgtpVk\"\n}"
+				}
+			]
+		},
+		{
+			"name": "register  auth/users/ ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "patrikfusek2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "patrik123fusek",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"users",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example 400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "patrikfusek2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "patrik123fusek",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"password\": [\n        \"The password is too similar to the username.\"\n    ]\n}"
+				},
+				{
+					"name": "example 201 created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "patrikfusek2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "vrtulnik4020",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 25,\n    \"username\": \"patrikfusek2\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/destinations/specs/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"trip_name\": \"New York City Gateway\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destinations/specs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destinations",
+						"specs",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trip_name\": \"New York City Gateway\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/destinations/specs/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"destinations",
+								"specs",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1087"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"trip_name\": \"New York City Gateway\",\n        \"trip_city\": \"New York City\",\n        \"trip_specs\": \"New York City Gateway is a perfect destination for those who want to experience the fast-paced lifestyle of one of the world most exciting cities. The city offers iconic landmarks like the Empire State Building, Statue of Liberty, and Central Park, along with a vibrant food and art scene. The citys bustling energy, stunning architecture, and diverse culture make it an ideal destination for a thrilling vacation.\",\n        \"trip_price\": \"3500.00\",\n        \"latitude\": \"40.712800\",\n        \"longitude\": \"-74.006000\",\n        \"trip_urls\": [\n            \"http://127.0.0.1:8000/media/destination_images/New%20York%20City%20Gateway.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/New%20York%20City%20Gateway2.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/image_AEOIsNi.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_9MeP9n0.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_fig2EYW.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_eVt8hY8.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_ap8kARo.png\"\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api/history/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 21\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/history/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"history",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/history/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"history",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"trip_id\": 1,\n        \"custom_trip_name\": \"Los Angeles Adventure\",\n        \"trip_price\": \"2500.00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api/reserve/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"trip_name\": \"New York City Gateway\",\r\n    \"persons_no\": 1,\r\n    \"user_id\": 21\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reserve/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reserve",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trip_name\": \"New York City Gateway\",\r\n    \"persons_no\": 1,\r\n    \"user_id\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/reserve/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reserve",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"successfully added reservations\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/users/current/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": 21\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"all",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/current/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"current",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 21,\n    \"username\": \"patrikfusek\",\n    \"is_active\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "api/users/all/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": 21\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"all",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/all/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"all",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 23,\n        \"username\": \"juraj\",\n        \"is_active\": true\n    },\n    {\n        \"id\": 24,\n        \"username\": \"pato\",\n        \"is_active\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api/destinations/image/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "trip_image",
+							"type": "file",
+							"src": "/C:/Users/patri/OneDrive/Počítač/California.jpg"
+						},
+						{
+							"key": "trip",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destinations/image/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destinations",
+						"image",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "trip_image",
+									"type": "file",
+									"src": "/C:/Users/patri/OneDrive/Počítač/California.jpg"
+								},
+								{
+									"key": "trip",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/destinations/image/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"destinations",
+								"image",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"trip\": 1,\n    \"trip_image\": \"/media/destination_images/California.jpg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/sendNotification/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sendNotification/?trip=New York City Gateway",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sendNotification",
+						""
+					],
+					"query": [
+						{
+							"key": "trip",
+							"value": "New York City Gateway"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/sendNotification/?trip=New York City Gateway",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sendNotification",
+								""
+							],
+							"query": [
+								{
+									"key": "trip",
+									"value": "New York City Gateway"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"message\": \"Notifications sent to all users.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/destinations/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/destinations/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"destinations",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/destinations/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"destinations",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4840"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"trip_name\": \"Los Angeles Adventure\",\n        \"trip_city\": \"Los Angeles\",\n        \"trip_specs\": \"During your adventure trip, you can explore famous attractions \\n\\t \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t  like Hollywood Walk of Fame, Universal Studios Hollywood, and the Getty Center. \\n\\t \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t  You can also take a scenic drive along the Pacific Coast Highway, explore the Santa Monica Pier, \\n\\t \\t\\t\\t\\t\\t\\t\\t\\t\\t\\t  and stroll through the famous Venice Beach boardwalk.\",\n        \"trip_price\": \"2500.00\",\n        \"latitude\": \"34.052200\",\n        \"longitude\": \"-118.243700\",\n        \"trip_urls\": [\n            \"http://127.0.0.1:8000/media/destination_images/Los%20Angeles%20Adventure.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/Los%20Angeles%20Adventure2.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/image_7YFsIp8.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_jRklswG.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_urXqPFW.png\",\n            \"http://127.0.0.1:8000/media/destination_images/California.jpg\"\n        ]\n    },\n    {\n        \"id\": 2,\n        \"trip_name\": \"New York City Gateway\",\n        \"trip_city\": \"New York City\",\n        \"trip_specs\": \"New York City Gateway is a perfect destination for those who want to experience the fast-paced lifestyle of one of the world most exciting cities. The city offers iconic landmarks like the Empire State Building, Statue of Liberty, and Central Park, along with a vibrant food and art scene. The citys bustling energy, stunning architecture, and diverse culture make it an ideal destination for a thrilling vacation.\",\n        \"trip_price\": \"3500.00\",\n        \"latitude\": \"40.712800\",\n        \"longitude\": \"-74.006000\",\n        \"trip_urls\": [\n            \"http://127.0.0.1:8000/media/destination_images/New%20York%20City%20Gateway.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/New%20York%20City%20Gateway2.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/image_AEOIsNi.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_9MeP9n0.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_fig2EYW.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_eVt8hY8.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_ap8kARo.png\"\n        ]\n    },\n    {\n        \"id\": 3,\n        \"trip_name\": \"Hawaii Island Hopping\",\n        \"trip_city\": \"Hawaii\",\n        \"trip_specs\": \"Hawaii Island Hopping is an adventure-packed tour that takes you on an unforgettable journey across the beautiful Hawaiian islands. The tour offers a variety of experiences, from exploring active volcanoes and hiking through lush forests to swimming in crystal clear waters and relaxing on pristine beaches. The Hawaiian islands are also home to a rich culture, which you can experience through traditional Hawaiian food, dance, and music.\",\n        \"trip_price\": \"5000.00\",\n        \"latitude\": \"19.896800\",\n        \"longitude\": \"-155.582800\",\n        \"trip_urls\": [\n            \"http://127.0.0.1:8000/media/destination_images/Hawaii%20Island%20Hopping.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/Hawaii%20Island%20Hopping2.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/image.png\"\n        ]\n    },\n    {\n        \"id\": 4,\n        \"trip_name\": \"Paris Romance Tour\",\n        \"trip_city\": \"Paris\",\n        \"trip_specs\": \"The Paris Romance Tour is perfect for couples looking to experience the city of love. This tour takes you on a romantic journey through Paris iconic landmarks, including the Eiffel Tower, the Louvre, and the Seine River. You can enjoy a scenic boat ride, a romantic dinner in a classic Parisian restaurant, and explore the city charming streets and quaint cafes. The Paris Romance Tour is the perfect way to create unforgettable memories with your loved one.\",\n        \"trip_price\": \"4000.00\",\n        \"latitude\": \"48.856600\",\n        \"longitude\": \"2.352200\",\n        \"trip_urls\": [\n            \"http://127.0.0.1:8000/media/destination_images/Paris%20Romance%20Tour.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/Paris%20Romance%20Tour2.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/image_m5n3qNy.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_iKLI6h8.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_ezi5kul.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_S50eCYS.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_yWrl9CZ.png\"\n        ]\n    },\n    {\n        \"id\": 5,\n        \"trip_name\": \"Sicily Mafia Meeting\",\n        \"trip_city\": \"Palermo\",\n        \"trip_specs\": \"Palermo is the cultural and artistic capital of Sicily, Italy. The city is steeped in history, and its streets are lined with stunning Baroque buildings and ancient ruins. You can explore the city rich culture by visiting museums and art galleries, enjoying local Sicilian cuisine, and experiencing the bustling street markets. Palermo is also a great base for exploring the beautiful beaches and scenic countryside of Sicily.\",\n        \"trip_price\": \"19000.00\",\n        \"latitude\": \"38.115700\",\n        \"longitude\": \"13.361300\",\n        \"trip_urls\": [\n            \"http://127.0.0.1:8000/media/destination_images/Palermo.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/Palermo2.jpg\",\n            \"http://127.0.0.1:8000/media/destination_images/image_52deYlW.png\",\n            \"http://127.0.0.1:8000/media/destination_images/image_ML5fF06.png\"\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api/notification/token/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "ExpoToken[asdd6g54a65a]",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notification/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notification",
+						"token",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example ok",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "ExpoToken[asdd6g54a65a]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notification/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notification",
+								"token",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PUT, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Token saved successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api/removereservation/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "trip",
+							"value": "New York City Gateway",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/removereservation/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"removereservation",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "example",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "21",
+									"type": "text"
+								},
+								{
+									"key": "trip",
+									"value": "New York City Gateway",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/removereservation/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"removereservation",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "77"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "daphne"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Reservation for user 21 and trip New York City Gateway deleted.\"\n}"
+				}
+			]
+		}
+	]
+}
